@@ -4,9 +4,9 @@ from sklearn.tree import DecisionTreeClassifier #Self Explanatory
 from sklearn.model_selection import train_test_split #Split data set to test and train
 from sklearn.metrics import accuracy_score #For calculating accuracy
 
-iris_data=pandas.read_csv('Iris.csv')
-x=iris_data.drop(columns=["Id","Species"])
-y=iris_data["Species"]
+iris_data=pandas.read_csv('iris.csv')
+x=iris_data.drop(columns=["variety"])
+y=iris_data["variety"]
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2)
 model=DecisionTreeClassifier()
 model.fit(x_train,y_train)
